@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConvertidorSI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-nY-5rs">
+                                <rect key="frame" x="16" y="20" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-Gs-W9a">
+                                <rect key="frame" x="183" y="20" width="159" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="kfp-he-7LA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZ1-vF-xpX">
+                                <rect key="frame" x="0.0" y="58" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-d5-Q7I">
+                                <rect key="frame" x="155.5" y="282" width="64" height="30"/>
+                                <state key="normal" title="Convertir"/>
+                                <connections>
+                                    <action selector="convertUnits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lk-le-D3h"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9l-hs-wf2">
+                                <rect key="frame" x="16" y="332" width="343" height="335"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hdY-nY-5rs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4uB-x5-JNb"/>
+                            <constraint firstAttribute="trailing" secondItem="vZ1-vF-xpX" secondAttribute="trailing" id="7DW-uM-b8R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G9l-hs-wf2" secondAttribute="trailing" id="7EO-as-zUZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G9l-hs-wf2" secondAttribute="bottom" id="ASJ-sz-yEs"/>
+                            <constraint firstItem="vZ1-vF-xpX" firstAttribute="centerX" secondItem="g1i-d5-Q7I" secondAttribute="centerX" id="LRE-3y-1N8"/>
+                            <constraint firstItem="yIm-Gs-W9a" firstAttribute="width" secondItem="hdY-nY-5rs" secondAttribute="width" id="NYy-vo-Um9"/>
+                            <constraint firstItem="yIm-Gs-W9a" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="O9H-8j-ZeN"/>
+                            <constraint firstItem="vZ1-vF-xpX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rbf-97-gof"/>
+                            <constraint firstItem="G9l-hs-wf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQp-VO-k2O"/>
+                            <constraint firstItem="g1i-d5-Q7I" firstAttribute="top" secondItem="vZ1-vF-xpX" secondAttribute="bottom" constant="8" symbolic="YES" id="bOQ-PN-zuV"/>
+                            <constraint firstItem="hdY-nY-5rs" firstAttribute="baseline" secondItem="yIm-Gs-W9a" secondAttribute="baseline" id="kcC-He-OdN"/>
+                            <constraint firstItem="hdY-nY-5rs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mde-cV-fyh"/>
+                            <constraint firstItem="G9l-hs-wf2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uQE-rA-STw"/>
+                            <constraint firstItem="G9l-hs-wf2" firstAttribute="top" secondItem="g1i-d5-Q7I" secondAttribute="bottom" constant="20" id="wlk-b6-xpg"/>
+                            <constraint firstItem="yIm-Gs-W9a" firstAttribute="leading" secondItem="hdY-nY-5rs" secondAttribute="trailing" constant="8" symbolic="YES" id="wm9-gg-vSW"/>
+                            <constraint firstItem="vZ1-vF-xpX" firstAttribute="top" secondItem="hdY-nY-5rs" secondAttribute="bottom" constant="8" symbolic="YES" id="yzh-20-DHG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="hdY-nY-5rs" id="xXg-dY-xjh"/>
+                        <outlet property="output" destination="yIm-Gs-W9a" id="fOV-9i-QPI"/>
+                        <outlet property="picker" destination="vZ1-vF-xpX" id="9kZ-WT-Kul"/>
+                        <outlet property="tableView" destination="G9l-hs-wf2" id="h4K-t5-YKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
